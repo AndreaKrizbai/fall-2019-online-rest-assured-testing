@@ -1,17 +1,14 @@
 package com.automation.tests.day3;
+
 import io.restassured.http.ContentType;
-import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.*;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.Matchers.*;
 
 public class ORDSTestsDay3 {
@@ -44,7 +41,12 @@ public class ORDSTestsDay3 {
         System.out.println("First name of 1st employee: " + nameOfFirstEmployee);
         System.out.println("First name of last employee: " + nameOfLastEmployee);
 
-        Map<String, ?>firstEmployee = jsonPath.get("items[0]");
-        System.out.println(firstEmployee);
+        Map<String, ?> searchByName = jsonPath.get("items.find{it.last_name == 'Hunold'}");
+        String searchByEmail = jsonPath.get("items.find{it.email == 'BERNST'}.last_name");
+        String maxSalary = jsonPath.get("items.max{it.salary}.last_name");
+
+        System.out.println(searchByName);
+        System.out.println(searchByEmail);
+        System.out.println(maxSalary);
     }
 }
