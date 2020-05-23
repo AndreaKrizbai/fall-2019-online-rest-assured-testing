@@ -1,0 +1,40 @@
+{
+  "admissionNo": "1845",
+  "batch": 15,
+  "birthDate": "01/01/1845",
+  "company": {
+    "address": {
+      "city": "Tampa",
+      "state": "Florida",
+      "street": "1 BestStateToLiveAt Street",
+      "zipCode": 33606
+    },
+    "companyName": "Cybertek",
+    "startDate": "05/23/2020",
+    "title": "SDET"
+  },
+  "contact": {
+    "emailAddress": "letsallmovetofl@gmail.com",
+    "phone": "305-666-6666",
+    "premanentAddress": "1 BestStateToLiveAt Street"
+  },
+  "firstName": "Fatih",
+  "gender": "Male",
+  "joinDate": "11/02/2019",
+  "lastName": "WantsUsToMoveToFL",
+  "major": "FL",
+  "password": "1845",
+  "section": "666",
+  "subject": "Geography"
+}
+
+
+
+
+
+
+
+
+
+
+
