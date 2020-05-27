@@ -8,6 +8,8 @@ import org.apache.commons.lang3.reflect.FieldUtils;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.io.File;
+import java.util.Base64;
+
 import static io.restassured.RestAssured.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.Matchers.*;
@@ -37,6 +39,12 @@ public class POJOPracticeWithPreschool {
         Response response = get("/student/{id}",11613).prettyPeek();
         Student student = response.jsonPath().getObject("students[0]",Student.class);
         System.out.println(student);
+    }
+
+    public static void main(String[] args) {
+        byte[] decoded = Base64.getDecoder().decode("QW5kcmVh");
+        String value = new String(decoded);
+        System.out.println(value);
     }
 
 }
